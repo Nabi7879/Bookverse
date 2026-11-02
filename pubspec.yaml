@@ -1,0 +1,42 @@
+name: bookverse
+description: "BookVerse — Online Books Library. A Flutter student demo built on the ExpenseManager (Owlance) starter project."
+# Prevents accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.8
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  # Already in the teacher project: number/date formatting ($12.99, 26 Oct 2026).
+  intl: ^0.19.0
+  # Already in the teacher project: shares one BookStore with every screen.
+  provider: ^6.1.2
+  # The ONLY new package: saves each demo user's shelf, cart, orders and
+  # history on the device so they survive an app restart.
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Every book cover lives in this one folder (assets/covers/bv001.jpg ...).
+  assets:
+    - assets/covers/
+
+  # Playfair Display (SIL Open Font License) for headings — see assets/fonts/.
+  fonts:
+    - family: Playfair
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
+        - asset: assets/fonts/PlayfairDisplay-Bold.ttf
+          weight: 700
